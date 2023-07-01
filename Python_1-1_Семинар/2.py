@@ -8,10 +8,12 @@
 
 # #print(ceil(eval(f'{m}/{n}')))
 
+# #print(ceil.math(f'{m}/{n}')))
+
 # x = (m // n) + (m % n > 0)
 # print(x)
 
 n = int(input("Введите число n: "))
 m = int(input("Введите число m: "))
 s = (m + n - 1) // n
-print(s)
+print(f'Заданное расстояние машина проедет за {s} дня/дней.')

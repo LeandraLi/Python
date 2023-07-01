@@ -11,7 +11,7 @@
 # x = (m // n) + (m % n > 0)
 # print(x)
 
-n = int(input())
-m = int(input())
+n = int(input("Введите число n: "))
+m = int(input("Введите число m: "))
 s = (m + n - 1) // n
 print(s)

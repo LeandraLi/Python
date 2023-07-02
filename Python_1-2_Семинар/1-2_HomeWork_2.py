@@ -10,8 +10,18 @@
 # 5 -> 1 0 1 1 0
 # 2
 
+n = int(input("Введите количество монеток на столе: "))
 
+gerb = 0
+reshka = 0
 
+for i in range(n):
+    side = int(input())
+    if side == 1:
+        reshka += 1
+    else:
+        gerb +=1
+print(min(gerb, reshka))
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -29,19 +39,19 @@
 
 from math import sqrt
 
-s = int(input("Введите сумму чисел: "))
-p = int(input("Введите произведение чисел: "))
+# s = int(input("Введите сумму чисел: "))
+# p = int(input("Введите произведение чисел: "))
 
 # Вариант 1: через цикл:
-flag = False
-for x in range(1000):
-    for y in range(1000):
-        if (x + y) == s and x*y == p:
-            print(x, y)
-            flag = True
-            break
-    if flag:
-        break
+# flag = False
+# for x in range(1000):
+#     for y in range(1000):
+#         if (x + y) == s and x*y == p:
+#             print(x, y)
+#             flag = True
+#             break
+#     if flag:
+#         break
 
 
 # Вариант 2 - через квадратное уравнение:
@@ -59,4 +69,8 @@ for x in range(1000):
 # Пример:
 # 10 -> 1 2 4 8
 
-
+# n = int(input("Введите значение чисоа n: "))
+# degree = 0
+# while 2**degree <= n:
+#     print(2**degree)
+#     degree += 1

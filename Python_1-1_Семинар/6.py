@@ -15,13 +15,17 @@ ay = int(input("Введите 2-ое число от 1 до 8: "))
 bx = int(input("Введите 3-е число от 1 до 8: "))
 by = int(input("Введите 4-ое число от 1 до 8: "))
 
-# if (ax == bx or bx == ax + 1 or bx == ax - 1) and (ay == by or ay == by - 1 or ay == by + 1):
-#     print('YES')
-# else:
-#     print('NO')
+if 1<=ax<=8 and 1<=ay<=8 and 1<=bx<=8 and 1<=by<=8:
+
+    # if (ax == bx or bx == ax + 1 or bx == ax - 1) and (ay == by or ay == by - 1 or ay == by + 1):
+    #     print('YES')
+    # else:
+    #     print('NO')
 
 # Вариант 2:
-if abs(ax-bx)<=1 and abs(ay-by)<=1:
-    print("YES")
+    if abs(ax-bx)<=1 and abs(ay-by)<=1:
+        print("YES")
+    else:
+        print("NO")
 else:
-    print("NO")
+ print("Ошибка ввода!")

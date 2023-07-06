@@ -110,21 +110,44 @@
 # ноутбук
 #     12
 
-dic_en = {1: "A, E, I, O, U, L, N, S, T, R", 2: "D, G", 3: "B, C, M, P", 4: "F, H, V, W, Y", 5: "K", 8: "J, X", 10: "Q, Z"}
-dic_ru = {1: "А, В, Е, И, Н, О, Р, С, Т", 2: " Д, К, Л, М, П, У", 3: "Б, Г, Ё, Ь, Я", 4: "Й, Ы", 5: "Ж, З, Х, Ц, Ч", 8: "Ш, Э, Ю", 10: "Ф, Щ, Ъ"}
+# Вариант 1
 
-word = input("Введите слово на русском ИЛИ английском: ").upper() # перевод слова в верхний регистр
-count = 0
-if word[0] in "AEIOULNSTRDGBCMPFHVWYKJXQZ":
-    for symbol in word:
-        for key in dic_en:
-# key проходится по ключам
-            if symbol in dic_en[key]:
-                count += key
-else:
-    for symbol in word:
-        for key in dic_ru:
-            if symbol in dic_ru[key]:
-                count += key
-print(count)
+# dic_en = {1: "A, E, I, O, U, L, N, S, T, R", 2: "D, G", 3: "B, C, M, P", 4: "F, H, V, W, Y", 
+#           5: "K", 8: "J, X", 10: "Q, Z"}
+# dic_ru = {1: "А, В, Е, И, Н, О, Р, С, Т", 2: " Д, К, Л, М, П, У", 3: "Б, Г, Ё, Ь, Я", 
+#           4: "Й, Ы", 5: "Ж, З, Х, Ц, Ч", 8: "Ш, Э, Ю", 10: "Ф, Щ, Ъ"}
 
+# word = input("Введите слово на русском ИЛИ английском: ").upper() # перевод слова в верхний регистр
+# count = 0
+# if word[0] in "AEIOULNSTRDGBCMPFHVWYKJXQZ":
+#     for symbol in word:
+#         for key in dic_en:
+# # key проходится по ключам
+#             if symbol in dic_en[key]:
+#                 count += key
+# else:
+#     for symbol in word:
+#         for key in dic_ru:
+#             if symbol in dic_ru[key]:
+#                 count += key
+# print(count)
+
+
+# Вариант 2
+
+# dic = {1: "A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т", 
+#           2: "D, G, Д, К, Л, М, П, У", 
+#           3: "B, C, M, P, Б, Г, Ё, Ь, Я", 
+#           4: "F, H, V, W, Y, Й, Ы", 
+#           5: "K, Ж, З, Х, Ц, Ч", 
+#           8: "J, X, Ш, Э, Ю", 
+#           10: "Q, Z, Ф, Щ, Ъ"}
+
+# word = input("Введите слово на русском ИЛИ английском: ").upper() # перевод слова в верхний регистр
+# count = 0
+
+# for symbol in word:
+#         for key in dic:
+#             if symbol in dic[key]:
+#                 count += key
+# print(count)

@@ -7,15 +7,35 @@
 # m — кол-во элементов второго множества. 
 # Затем пользователь вводит сами элементы множеств.
 
-n = int(input("Введите кол-во эл-в 1-го множества: "))
-m = int(input("Введите кол-во эл-в 2-го множества: "))
+# Вариант 1:
 
-list_1 = [int(input("Введите эл-ты 1-го множества: ")) for i in range(n)]
-list_2 = [int(input("Введите эл-ты 2-го множества: ")) for i in range(m)]
-print(f'Перавое множество: {list_1}')
-print(f'Перавое множество: {list_2}')
+# n = int(input("Введите кол-во эл-в 1-го массива: "))
+# m = int(input("Введите кол-во эл-в 2-го массива: "))
 
-# list_3 = 
+# list_1 = [int(input("Введите эл-ты 1-го массива: ")) for i in range(n)]
+# list_2 = [int(input("Введите эл-ты 2-го массива: ")) for i in range(m)]
+# print(f'1-ое множество: {set(list_1)}')
+# print(f'2-ое множество: {set(list_2)}')
+
+# list_3 = set()
+# if len(list_1) > len(list_2):
+#     for i in list_1:
+#         if i in list_2:
+#             list_3.add(i)
+# else:
+#     for i in list_2:
+#         if i in list_1:
+#             list_3.add(i)
+# print(sorted(list_3))
+
+
+# Вариант 2 (с семинара):
+
+# a = [2, 4, 6, 8, 10, 12, 10, 8, 6, 4, 2]
+# b = [2, 12, 9, 12, 6, 18, 8]
+# print(sorted(set(a).intersection(set(b))))
+
+# на семинаре не было сортировки по возрастанию - добавила метод sorted()
 
 
 # -------------------------------------------------------------------------------------------------
@@ -33,3 +53,30 @@ print(f'Перавое множество: {list_2}')
 # Напишите программу для нахождения максимального числа ягод, 
 # которое может собрать за один заход собирающий модуль, 
 # находясь перед некоторым кустом заданной во входном файле грядки.
+
+
+# Вариант 1
+
+bush = [4, 7, 3, 4]
+max_amount = 0
+for i in range(len(bush) - 1):
+    if (bush[i-1] + bush[i] + bush[i+1]) > max_amount:
+        max_amount = bush[i-1] + bush[i] + bush[i+1]
+if (bush[-1] + bush[-2] + bush[0]) > max_amount:
+    max_amount = bush[-1] + bush[-2] + bush[0]
+print(f'Max число ягод за один заход: {max_amount}')
+
+
+# # Вариант 2 - через рандом и заданное кол-во кустов
+
+# # Не получается через рандом сделать :(
+# import random
+# bush = int(input("Введите количество кустов: "))
+# max_amount = random.randint(1,20)
+# for i in range(len(bush) - 1):
+#     if (bush[i-1] + bush[i] + bush[i+1]) > max_amount:
+#         max_amount = bush[i-1] + bush[i] + bush[i+1]
+# if (bush[-1] + bush[-2] + bush[0]) > max_amount:
+#     max_amount = bush[-1] + bush[-2] + bush[0]
+# print(f'Max число ягод за один заход: {max_amount}')
+

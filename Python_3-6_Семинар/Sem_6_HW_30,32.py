@@ -27,7 +27,10 @@
 # Ввод: [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
 # Вывод: [1, 9, 13, 14, 19]
 
+a = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+min = 7
+max = 12
 
-
-
-
+result = list(map(lambda x: x if min <= a[x] <= max else -1, range(len(a))))
+result = list(filter(lambda x: x > -1, result))
+print(result)

@@ -133,7 +133,19 @@
 # Вывод:
 # 220 284
 
+# k = int(input("Введите границу - число k: "))
 
+# nums_lst = []
+# for i in range(k):
+#     summa = 0
+#     for j in range(1, i//2+1):
+#         if i%j == 0:
+#             summa += j # в этом внутреннем цикле мы нашли сумму всех делителей для числа i
+#     nums_lst.append([i, summa])
+# print(nums_lst)
 
-
+# for i in range(len(nums_lst)):
+#     for j in range(i+1, len(nums_lst)):
+#         if nums_lst[i][0] == nums_lst[j][1] and nums_lst[i][1] == nums_lst[j][0]:
+#             print(nums_lst[i][0], nums_lst[j][0])
 

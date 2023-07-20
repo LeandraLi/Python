@@ -17,8 +17,22 @@
 # Вывод:
 # Парам пам-пам
 
+# stroka1 = "пара-ра-рам рам-пам-папам па-ра-па-дам"
+# vowels = ['а','е','ё','и','й','о','у','ы','э','ю','я']
+# list_phrases = stroka1.split()
+# count_vow = []
+# for phrase in list_phrases:
+#     count = 0
+#     for letter in phrase:
+#         if letter in vowels:
+#             count += 1
+#     count_vow.append(count)
+# # print(count_vow) # # проверяем, сколько гласных посчитано в итоге в фразе
 
-
+# if count_vow.count(count_vow[0]) == len(count_vow):
+#     print("Парам пам-пам")
+# else:
+#     print("Пам парам")
 
 
 # -------------------------------------------------------------------------------------------------
@@ -41,5 +55,12 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
+# def print_operation_table(operation, num_rows = 6, num_columns = 6):
+#     for row in range(1, num_rows+1):
+#         for col in range(1, num_columns+1):
+#             print(operation(row, col), end = "\t")
+#         print()
+
+# print_operation_table(lambda x, y: x * y)
 
 

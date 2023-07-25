@@ -1,3 +1,6 @@
+from random import random
+
+
 def write_info(info):
     with open("data.txt", "a", encoding = "utf-8") as file:
         file.write(info)
@@ -57,4 +60,21 @@ def sort(sort_num):
     with open("data.txt","w", encoding = "utf-8") as file:
         file.writelines(lst_old)
 
+import random
 
+def randint(a, b):
+    return random.randint(a, b)
+
+def generate(num):
+    names = ["Андрей","Дмитрий","Евгений","Иван","Константин","Максим","Никита","Олег","Павел","Роман",
+            "Сергей","Тимофей","Ульяна","Кристина","Эдуард","Юлия","Яна","Виктория","Галина","Зинаида",]
+    surnames = ["Иванов","Смирнов","Кузнецов","Попов","Васильев","Петров","Соколов","Михайлов","Новиков",
+                "Федоров","Морозов","Волков","Алексеев","Лебедев","Семенов","Егоров","Павлов","Козлов",
+                "Степанов","Николаев",]
+    with open("data.txt","a", encoding = "utf-8") as file:
+        for _ in range(num):
+            fio = random.choice(names) + " " + random.choice(surnames)
+            birth = f"{randint(1, 31)}.{randint(1, 12)}.{randint(1950, 2000)}"
+            tele = random.randint(89000000000, 89990000000)
+            line = f"{fio},{birth},{tele}\n"
+            file.write(line)

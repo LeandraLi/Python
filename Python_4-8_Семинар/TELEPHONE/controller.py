@@ -33,9 +33,12 @@ def main():
         elif num == 6:
             view_all()
         elif num == 7:
+            count = input_count()
+            generate(count)
+            print("Успешно сгенерировано")
+        elif num == 8:
             print("Выход из программы") # сразу пишем сообщение, т.к. знаем сразу, что 5 - это выход
             pass
             break
-
 main()
 
